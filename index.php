@@ -3,8 +3,6 @@
 require_once 'Csv/Read.php';
 require_once 'Csv/Write.php';
 
-$openfile = new Read();
-$openfile->ReadFile('data.csv');
 
 
 if($_POST) {
@@ -20,6 +18,10 @@ if($_POST) {
         $Writefile->WriteFile('data.csv', $operator);
     }
 }
+
+$openfile = new Read();
+$openfile->ReadFile('data.csv');
+
 
 
 ?>

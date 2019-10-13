@@ -1,7 +1,8 @@
 <?php
 
+require_once 'InterfaceCSV.php';
 
-class Write
+class Write implements InterfaceCSV
 {
     private $file;
     private $somecontent;
@@ -31,12 +32,17 @@ class Write
                 exit;
             }
 
-            echo "Ура! Записали ($somecontent) в файл ($file)";
+            echo "Записали ($somecontent) в файл ($file)";
 
             fclose($handle);
 
         } else {
             echo "Файл $file недоступен для записи";
         }
+    }
+
+    public function ReadFile($file)
+    {
+        // TODO: Implement ReadFile() method.
     }
 }

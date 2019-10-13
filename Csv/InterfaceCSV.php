@@ -1,8 +1,9 @@
 <?php
 
-
-class InterfaceCSV
+interface InterfaceCSV
 {
-    public function  Write();
-    public function  Read();
+    public function ReadFile($file);
+
+    public function WriteFile($file, $somecontent);
+
 }

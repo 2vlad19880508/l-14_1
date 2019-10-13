@@ -1,8 +1,8 @@
 <?php
 
+require_once 'InterfaceCSV.php';
 
-
-class Read
+class Read implements InterfaceCSV
 {
     private $file;
 
@@ -12,7 +12,6 @@ class Read
         if (file_exists($file)) {
 
             $arrstr = file($file);
-            $arrstrHead = explode(";", $arrstr[0]);
 
             echo '<table border=1>';
             foreach ($arrstr as &$value) {
@@ -31,4 +30,9 @@ class Read
         }
     }
 
+
+    public function WriteFile($file, $somecontent)
+    {
+        // TODO: Implement WriteFile() method.
+    }
 }
